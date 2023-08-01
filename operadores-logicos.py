@@ -37,3 +37,13 @@ False   True
 print("not")
 boolNot = True
 print(not(boolNot)) # False
+
+""" prioridad
+
+not     mayor ---> se evaluan primero
+and       |  
+or      menor ---> se evaluan al final
+
+si se evaluan varios operadores iguales
+se evalua de izquierda a derecha.
+"""
