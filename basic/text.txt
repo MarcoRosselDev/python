@@ -1,0 +1,4 @@
+marco = 5
+eduardo = 5
+eva = 7
+rossel = 6
