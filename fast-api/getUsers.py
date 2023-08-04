@@ -1,8 +1,12 @@
-from typing import Union
-
 from fastapi import FastAPI
 
 app = FastAPI()
+
+# Iniciar el server: uvicorn getUsers:app --reload
+
+@app.get("/users")
+async def users():
+    return "te enviaremos los usuarios proximamente"
 
 class User():
     name: str
@@ -16,19 +20,3 @@ users_list = [
     User(name="juan", lastName="medina",age=35 ,url="www.jmedina.com"),
     User(name="jayson", lastName="ruminot",age=14 ,url="www.jsonRuminot.com"),
 ]
-
-@app.get("/")
-async def read_root():
-    return {"Hello": "World"}
-
-@app.get("/url")
-async def url():
-    return {"return_json":"mesaje from /url"}
-
-
-@app.get("/users")
-async def getUsers():
-    return { users_list }
-# @app.get("/items/{item_id}")
-# def read_item(item_id: int, q: Union[str, None] = None):
-#     return {"item_id": item_id, "q": q}
