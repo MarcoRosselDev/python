@@ -5,6 +5,7 @@ app = FastAPI()
 
 # Iniciar el server: uvicorn getUsers:app --reload
 
+# usuarios creados a mano
 @app.get("/usersJSON")
 async def getUsers():
     return [
@@ -29,6 +30,8 @@ users_list = [
     User(name="juan", lastName="medina",age=35 ,url="www.jmedina.com"),
     User(name="jayson", lastName="ruminot",age=14 ,url="www.jsonRuminot.com"),
 ]
+
+# usuarios creados con BaseModel
 @app.get("/userFromClass")
 async def getUsersBaseModal():
     return users_list
