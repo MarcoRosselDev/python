@@ -54,4 +54,11 @@ area_rectangel = length_rectangle * width_rectangle
 print("area rectangle = ", area_rectangel)
 # 7. Get radius of a circle using prompt. Calculate the area (area = pi x r x r) and circumference (c = 2 x pi x r) where pi = 3.14.
 
+input_value = input("cual es tu edad ?")
+print(type(input_value))
+print(input_value)
+radius = float(input("tell me what is the radium of the circle, please."))
+pi = 3.14
+area_my_circle = (pi * radius * radius)
+print(area_my_circle)
 # 8. Calculate the slope, x-intercept and y-intercept of y = 2x -2
