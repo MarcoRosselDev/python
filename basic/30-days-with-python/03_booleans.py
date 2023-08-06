@@ -42,5 +42,16 @@ print("compelx number 1j =", complex_number)
 base = 4
 height = 6
 area = base * height * 0.5
-
 print("area triangle = ", area)
+# 5. Write a script that prompts the user to enter side a, side b, and side c of the triangle. Calculate the perimeter of the triangle (perimeter = a + b + c).
+lado = 4
+triangle_perimeter = lado + lado + base
+print('perimetro de triangulo = ', triangle_perimeter)
+# 6. Get length and width of a rectangle using prompt. Calculate its area (area = length x width) and perimeter (perimeter = 2 x (length + width))
+length_rectangle = 8
+width_rectangle = 4
+area_rectangel = length_rectangle * width_rectangle
+print("area rectangle = ", area_rectangel)
+# 7. Get radius of a circle using prompt. Calculate the area (area = pi x r x r) and circumference (c = 2 x pi x r) where pi = 3.14.
+
+# 8. Calculate the slope, x-intercept and y-intercept of y = 2x -2
