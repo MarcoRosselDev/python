@@ -33,3 +33,18 @@ print(type(boolean_example)) # <class 'bool'>
 print(type(list_example)) # <class 'list'>
 print(type(diccionary_example)) # <class 'dict'>
 print(type(tupla_example)) # <class 'tuple'>
+
+### 2. Find an [Euclidian distance] between (2, 3) and (10, 8)
+# voy a hacerlo sin funciones, por que no lo hemos visto aun.
+
+# p(2, 3)
+px = 2
+py = 3
+
+# q(10, 8)
+qx = 10
+qy = 8
+
+euclidian_distance = ((qx - px)**2 + (qy - py)**2)**(1/2)
+
+print(euclidian_distance) ###  9.433981132056603
