@@ -36,3 +36,37 @@ exponential :  81
 floor division operator :  0
 
 """
+
+""" 3.  Write strings on the python interactive shell.
+The strings are the following:
+    - Your name
+    - Your family name
+    - Your country
+    - I am enjoying 30 days of python
+
+1-step ---> write "python" in the terminal
+2-step ---> print('marco', 'rossel nahuelpan', 'chileno', 'I am enjoying 30 days of python')
+
+output:
+marco rossel nahuelpan chileno I am enjoying 30 days of python
+"""
+
+""" 4.  Check the data types of the following data:
+
+    - 10
+    - 9.8
+    - 3.14
+    - 4 - 4j
+    - ['Asabeneh', 'Python', 'Finland']
+    - Your name
+    - Your family name
+    - Your country
+"""
+print(type(10)) # <class 'int'>
+print(type(9.8)) # <class 'float'>
+print(type(3.14)) # <class 'float'>
+print(type(4 - 4j)) # <class 'complex'>
+print(type(['Asabeneh', 'Python', 'Finland'])) # <class 'list'>
+print(type('Marco')) # <class 'str'>
+print(type('Rossel')) # <class 'str'>
+print(type('chileno')) # <class 'str'>
