@@ -77,3 +77,23 @@ reminder :  4
 exponent :  625
 floor_division :  1
 """
+
+### 5. The radius of a circle is 30 meters.
+
+# a. Calculate the area of a circle and assign the value to a variable name of area_of_circle
+
+radius_circle = 30 # meters
+pi = 3.14
+area_of_circle = (radius_circle ** 2) * pi
+print('area del circulo : ', area_of_circle) # area del circulo :  2826.0
+
+# b. Calculate the circumference of a  circle and assign the value to a variable name of circum_of_circle
+
+circumference_circle = radius_circle * 2 * pi
+print('perimetro circulo : ', circumference_circle) # perimetro circulo :  188.4
+
+# c. Take radius as user input and calculate the area.
+
+radius_circle_input = int(input('input a radius please : '))
+area_of_circle_input = (radius_circle_input ** 2) * pi
+print('area circle from input : ', area_of_circle_input)
