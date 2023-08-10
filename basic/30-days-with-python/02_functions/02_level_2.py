@@ -97,3 +97,20 @@ print('perimetro circulo : ', circumference_circle) # perimetro circulo :  188.4
 radius_circle_input = int(input('input a radius please : '))
 area_of_circle_input = (radius_circle_input ** 2) * pi
 print('area circle from input : ', area_of_circle_input)
+
+### 6. Use the built-in input function to get first name, last name, country and age from a user and store the value to their corresponding variable names
+
+firstname = input('cual es tu nombre?')
+lastname = input('cual es tu apellido?')
+nacionalidad = input('cual es tu nacionalidad?')
+edad = input('cual es tu edad?')
+
+print(firstname)
+print(lastname)
+print(nacionalidad)
+print(edad)
+
+### 7. Run help('keywords') in Python shell or in your file to check for the Python reserved words or keywords
+
+help('int')
+help('str')
