@@ -33,3 +33,11 @@ perimetro_rectangulo = ( length_rectangle + width_rectangle ) * 2
 
 print('El area del rectangulo es : ', area_rectangle)
 print('El perimetro del rectangulo es : ', perimetro_rectangulo)
+
+## 7. Get radius of a circle using prompt. Calculate the area (area = pi x r x r) and circumference (c = 2 x pi x r) where pi = 3.14.
+pi = 3.14
+radius_input = int(input('Enter a radius please : '))
+area_circulo = ( radius_input ** 2 ) * pi
+print('El area del circulo es : ', area_circulo)
+perimetro_circunferencia = radius_input * 2 * pi
+print('El perimetro del circulo es : ', perimetro_circunferencia)
