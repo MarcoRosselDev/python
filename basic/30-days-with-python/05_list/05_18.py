@@ -11,3 +11,8 @@ print(slice_last_tree)
 # ['Oracle', 'Microsoft', 'IBM', 'Google']
 
 ### 20. Slice out the middle IT company or companies from the list
+slice_middle = it_companies[:3] + it_companies[4:]
+# ['Oracle', 'Microsoft', 'IBM', 'Facebook', 'Apple', 'Amazon']
+# eliminamos google, que estaba en medio de la lista
+print(slice_middle)
+print(it_companies)

@@ -26,3 +26,4 @@ print(it_companies)
 new_list = it_companies[3:]
 print('new list : ', new_list)
 # new list :  ['Google', 'Facebook', 'Apple', 'Amazon']
+
