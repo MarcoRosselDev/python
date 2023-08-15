@@ -21,3 +21,21 @@ print(it_companies[0], it_companies[3], it_companies[-1])
 it_companies[-1] = 'Mercado Libre'
 print(it_companies)
 # ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Mercado Libre']
+
+### 11. Add an IT company to it_companies
+it_companies.append('Amazon')
+
+### 12. Insert an IT company in the middle of the companies list
+print('the length of IT company list : ', len(it_companies))
+# the length of IT company list :  8
+# sabiendo esto podemos agregar la IT company en la posicion 3 que es igual a la 4
+it_companies.insert(4, 'Github')
+print('it companies add in the midle : ', it_companies)
+# it companies add in the midle :  
+# ['Facebook', 'Google', 'Microsoft', 'Apple', 'Github', 'IBM', 'Oracle', 'Mercado Libre', 'Amazon']
+
+### 13. Change one of the it_companies names to uppercase (IBM excluded!)
+it_companies[0] = it_companies[0].upper()
+print('upper = change to uppercase : ', it_companies)
+# swapcase = change to uppercase :  
+# ['FACEBOOK', 'Google', 'Microsoft', 'Apple', 'Github', 'IBM', 'Oracle', 'Mercado Libre', 'Amazon']
