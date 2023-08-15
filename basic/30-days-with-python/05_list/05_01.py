@@ -11,3 +11,6 @@ my_list = ['a', 'b', 'c', 'd', 12]
 print(len(my_list)) # 5
 
 ### 4. Get the first item, the middle item and the last item of the list
+solution_04 = [my_list[0], my_list[2], my_list[4]]
+print(solution_04)
+# ['a', 'c', 12]
