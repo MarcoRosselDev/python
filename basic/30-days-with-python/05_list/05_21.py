@@ -18,3 +18,8 @@ print('delete last item : ',it_companies)
 ### 24. Remove all IT companies from the list
 del it_companies[:]
 print(it_companies) # []
+
+### 25. Destroy the IT companies list
+del it_companies
+print(it_companies)
+# NameError: name 'it_companies' is not defined
