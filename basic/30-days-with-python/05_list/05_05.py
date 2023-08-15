@@ -9,3 +9,15 @@ it_companies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Am
 ### 7. Print the list using print()
 print(it_companies)
 # ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon']
+
+### 8. Print the number of companies in the list
+print(len(it_companies)) # 7
+
+### 9. Print the first, middle and last company
+print(it_companies[0], it_companies[3], it_companies[-1])
+# Facebook Apple Amazon
+
+### 10. Print the list after modifying one of the companies
+it_companies[-1] = 'Mercado Libre'
+print(it_companies)
+# ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Mercado Libre']
