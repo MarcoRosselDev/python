@@ -43,5 +43,16 @@ print('la mediana de ages es: ', median_age)
 
 # e--------------------------------------------------------------
 # e-Find the range of the ages (max minus min)
+print('ages ', ages)
+# [19, 19, 19, 20, 22, 24, 24, 24, 25, 25, 26, 26]
+range = ages[-1] - ages[0]
+print('el rango de ages es : ', range)
+# el rango de ages es :  7
 # f--------------------------------------------------------------
 # f-Compare the value of (min - average) and (max - average), use abs() method
+
+min_average = abs(ages[0] - median_age)
+print(min_average) # 3.75
+
+max_average = abs(ages[-1] - median_age)
+print(max_average) # 3.25
