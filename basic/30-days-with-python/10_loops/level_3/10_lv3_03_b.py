@@ -1,5 +1,4 @@
-### 3-a. Go to the data folder and use the countries_data.py file.
-# What are the total number of languages in the data
+### 3-b. Find the ten most spoken languages from the data
 
 data = [
     {
@@ -2619,44 +2618,165 @@ data = [
         "currency": "Botswana pula"
     }
 ]
-#
 
-# 
-print(len(data)) # 250
 
-my_set = set()
+""" data = [ < ------- example of dictionary to togle the data
+    {
+        "name": "Afghanistan",
+        "capital": "Kabul",
+        "languages": [
+            "Pashto",
+            "Uzbek",
+            "Turkmen"
+        ],
+        "population": 27657145,
+        "flag": "https://restcountries.eu/data/afg.svg",
+        "currency": "Afghan afghani"
+    }, """
 
+# 1 step:--------------------------------------------------------------------
+# itero por data para agregar cada idioma hablado a una lista
+total_spoken_lang = []
 for bib in data:
-    for lengua in bib["languages"]:
-        my_set.add(lengua)
+    for lang in bib['languages']:
+        total_spoken_lang.append(lang)
+
+print(len(total_spoken_lang)) # 366
+total_spoken_lang.sort() # lo ordenamos para comprobar resulatdos visualmente
+# end step 1------------------------------------------------------------------
+# 2 step:---------------------------------------------------------------------
+# creamos un set vacio para asegurarnos de no repetir el conteo del lenguaje
+my_list_of_lang = set()
+# creamos un dictionary vacio para agregar key=lenguaje, value=count-total
+my_bib_with_counts = {}
+
+for value in total_spoken_lang:
+    if (value in my_list_of_lang) == False:
+        my_list_of_lang.add(value)
+        my_bib_with_counts[value] = total_spoken_lang.count(value) 
+    else:
+        pass
+
+# print('this is my list of languages : ',my_list_of_lang)
+print('this is my dictionary of languages : ',my_bib_with_counts)
+
+#output dictionary
+# this is my dictionary of languages :  
+dic_total_count = {   
+    '(Eastern) Punjabi': 2, 
+    'Afrikaans': 2, 
+    'Albanian': 3, 
+    'Amharic': 1, 
+    'Arabic': 25, 
+    'Armenian': 2, 
+    'Aymara': 1, 
+    'Azerbaijani': 1, 
+    'Belarusian': 1, 
+    'Bengali': 1, 
+    'Bislama': 1, 
+    'Bosnian': 2, 
+    'Bulgarian': 1, 
+    'Burmese': 1, 
+    'Catalan': 1, 
+    'Chamorro': 2, 
+    'Chichewa': 1, 
+    'Chinese': 5, 
+    'Croatian': 3, 
+    'Czech': 1, 
+    'Danish': 1, 
+    'Divehi': 1, 
+    'Dutch': 8, 
+    'Dzongkha': 1, 
+    'English': 91, 
+    'Estonian': 1, 
+    'Faroese': 1, 
+    'Fijian': 1, 
+    'Finnish': 1, 
+    'French': 45, 
+    'Fula': 2, 
+    'Georgian': 1, 
+    'German': 7, 
+    'Greek (modern)': 2, 
+    'Haitian': 1, 
+    'Hebrew (modern)': 1, 
+    'Hindi': 2, 
+    'Hungarian': 1, 
+    'Icelandic': 1, 
+    'Indonesian': 1, 
+    'Irish': 1, 
+    'Italian': 4, 
+    'Japanese': 1, 
+    'Kalaallisut': 1, 
+    'Kazakh': 1,
+    'Khmer': 1, 
+    'Kinyarwanda': 1, 
+    'Kirundi': 1, 
+    'Kongo': 1, 
+    'Korean': 2, 
+    'Kurdish': 1, 
+    'Kyrgyz': 1, 
+    'Lao': 1, 
+    'Latin': 1, 
+    'Latvian': 1,
+    'Lingala': 2, 
+    'Lithuanian': 1, 'Luba-Katanga': 1, 'Luxembourgish': 1, 'Macedonian': 1, 'Malagasy': 1, 'Malay': 2, 'Malaysian': 1, 'Maltese': 1, 'Manx': 1, 'Marshallese': 1, 'Mongolian': 1, 'Nauruan': 1, 'Nepali': 1, 'Northern Ndebele': 1, 'Norwegian': 3, 'Norwegian Nynorsk': 2, 'Pashto': 1, 'Persian (Farsi)': 1, 'Polish': 1, 'Portuguese': 9, 'Quechua': 1, 'Romanian': 2, 'Russian': 9, 'Samoan': 2, 'Sango': 1, 'Serbian': 4, 'Shona': 1, 'Sinhalese': 1, 'Slovak': 2, 'Slovene': 1, 'Somali': 1, 'Southern Ndebele': 1, 'Southern Sotho': 2, 'Spanish': 24, 'Swahili': 4, 'Swati': 2, 'Swedish': 3, 'Tajik': 1, 'Tamil': 2, 'Thai': 1, 'Tigrinya': 1, 'Tonga (Tonga Islands)': 1, 'Tsonga': 1, 'Tswana': 2, 'Turkish': 2, 'Turkmen': 2, 'Ukrainian': 1, 'Urdu': 2, 'Uzbek': 2, 'Venda': 1, 'Vietnamese': 1, 'Xhosa': 1, 'Zulu': 1}
+
+# end step 2------------------------------------------------------------------
+# 3 step:---------------------------------------------------------------------
+# iteramos por el dictionary para ordenar en una list.sort()
+# y asi saber el valor de los 10 lenguajes mas hablados.
+
+top_list = []
+
+for key, value in dic_total_count.items():
+    # print(key, value)
+    top_list.append(value)
+
+top_list.sort(reverse=True)
+print(top_list)
+# [91, 45, 25, 24, 9, 9, 8, 7, 5, 4, 4, 4,
+
+last_list = []
+
+for key, value in dic_total_count.items():
+    if value == 91:
+        last_list.append(f'Top 1 language is: {key} with {value} speakers')
+    elif value == 45:
+        last_list.append(f'Top 2 language is: {key} with {value} speakers')
+    elif value == 25:
+        last_list.append(f'Top 3 language is: {key} with {value} speakers')
+    elif value == 24:
+        last_list.append(f'Top 4 language is: {key} with {value} speakers')
+    elif value == 9:
+        last_list.append(f'Top 5 and 6 language is: {key} with {value} speakers')
+    elif value == 9:
+        last_list.append(f'Top 5 and 6 language is: {key} with {value} speakers')
+    elif value == 8:
+        last_list.append(f'Top 7 language is: {key} with {value} speakers')
+    elif value == 7:
+        last_list.append(f'Top 8 language is: {key} with {value} speakers')
+    elif value == 5:
+        last_list.append(f'Top 9 language is: {key} with {value} speakers')
+    elif value == 4:
+        last_list.append(f'Top diez language is: {key} with {value} speakers')
+    else:
+        pass
 
 #
-print(my_set)
-print('The total number of languages in the data is : ', len(my_set))
-# The total number of languages in the data is :  111
-# pero borre 2 que me daban error por u-tf8 por lo que deben de ser unos 112 o 113
-# no pude resolver ese problema, por ahora.
+last_list.sort()
+print(last_list)
 
-
-""" {'Turkmen', 'Southern Ndebele', 'Afrikaans', 'Croatian', 
-'Shona', 'Zulu', 'Marshallese', 'Quechua', 'Malagasy', 'Aymara', 
-'Samoan', 'Dzongkha', 'Kongo', 'Bislama', 'Tajik', 'Norwegian Nynorsk',
-'Swati', 'Haitian', 'Xhosa', 'Thai', 'Kalaallisut', 'Chinese', 
-'Manx', 'Slovene', 'Polish', 'Kazakh', 'Urdu', 'English', 
-'Lingala', 'Luxembourgish', 'Faroese', 'Chichewa', 'Czech', 
-'Indonesian', 'Tamil', 'Danish', 'Arabic', 'Dutch', 'French', 
-'Northern Ndebele', 'Nepali', 'Uzbek', 'Slovak', 'Bosnian', 
-'Norwegian Bokm�l', 'Somali', 'Luba-Katanga', 'Burmese', 
-'Romanian', 'Mongolian', 'Kinyarwanda', 'Latvian', 'Venda', 
-'Lithuanian', 'Chamorro', 'Irish', 'Malaysian', 'Hungarian', 
-'Bengali', 'Malay', 'German', 'Finnish', 'Swedish', 'Greek (modern)
-', 'Latin', 'Persian (Farsi)', 'Nauruan', 'Hebrew (modern)', 
-'Japanese', 'Azerbaijani', 'Ukrainian', 'Vietnamese', 'Fula', 
-'Tonga (Tonga Islands)', 'Sango', 'Serbian', 'Khmer', 'Russian', 
-'Tigrinya', '(Eastern) Punjabi', 'Spanish', 'Norwegian', 'Southern 
-Sotho', 'Macedonian', 'Korean', 'Portuguese', 'Armenian', 'Hindi', 
-'Kirundi', 'Catalan', 'Guaran�', 'Italian', 'Tswana', 'Divehi', 
-'Amharic', 'Tsonga', 'Belarusian', 'Icelandic', 'Swahili', 
-'Bulgarian', 'Albanian', 'Sinhalese', 'Georgian', 'Pashto', 
-'Turkish', 'Maltese', 'Lao', 'Kurdish', 'Estonian', 'Kyrgyz', 
-'Fijian'} """
+""" output final
+[
+'Top 1 language is: English with 91 speakers',
+'Top 2 language is: French with 45 speakers',
+'Top 3 language is: Arabic with 25 speakers',
+'Top 4 language is: Spanish with 24 speakers',
+'Top 5 and 6 language is: Portuguese with 9 speakers',
+'Top 5 and 6 language is: Russian with 9 speakers',
+'Top 7 language is: Dutch with 8 speakers',
+'Top 8 language is: German with 7 speakers', 
+'Top 9 language is: Chinese with 5 speakers',
+'Top diez language is: Italian with 4 speakers',
+'Top diez language is: Serbian with 4 speakers',
+'Top diez language is: Swahili with 4 speakers']    """
