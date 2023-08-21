@@ -2,22 +2,11 @@
 it takes a whole number as a parameter and 
 it return a factorial of the number """
 
-def factorial(value):
-    numbers = []
-    if value%2 == 0:
-        numbers.append(value)
-        n = value/2
-        if n%2 == 0:
-            numbers.append(n)
-            i = value/2
-            if i%2 == 0:
-                numbers.append(i)
-            else:
-                'no more numbers'
-        else:
-                'no more numbers'
-    else:
-                'no div for 2'
-    return print(numbers)
+def factorial(number):
+    sum = 1
+    for i in range(1, number + 1):
+        sum = sum*i
+    return print(sum)
 
-factorial(10)
+factorial(5) # 120
+factorial(6) # 720
