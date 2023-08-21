@@ -3,7 +3,7 @@
 def sum_all_nums(*nums):
     suma = 0
     for num in nums:
-        if type(num) == int:
+        if type(num) == int or type(num) == float:
             suma += num
         else:
             print(f'El valor {num} no es un numero int')
