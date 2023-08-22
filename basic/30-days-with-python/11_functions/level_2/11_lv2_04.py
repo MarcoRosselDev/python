@@ -1,7 +1,6 @@
 """ 4. Write different functions which take lists. 
 They should calculate_mean, calculate_median, 
-calculate_mode, calculate_range, calculate_variance, 
-calculate_std (standard deviation). """
+calculate_mode """
 
 # funcion que calcule ma media = sumar cada valor / numero de valores 
 
