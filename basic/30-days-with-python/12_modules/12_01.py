@@ -19,8 +19,11 @@ def list_creator(string):
 
 # creamos listas de letras mayusculas, minusculas y numeros para llamarlos de forma aleatoria
 letters_list = list_creator(str_letters)
+print('letters_min_list = ', letters_list)
 numbers_list = list_creator(str_digits)
+print('numbers_list = ', numbers_list)
 letters_list_mayusc = list_creator(str_letters_mayusc)
+print('letter_may_list = ', letters_list_mayusc)
 
 
 
