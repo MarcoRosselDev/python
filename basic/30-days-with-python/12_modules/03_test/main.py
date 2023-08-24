@@ -6,12 +6,29 @@ from random_id import random_one
 def shuffle_list(lista):
     id_dictionary = {}
     lista_random = []
+    key_list = []
     for i in lista:
         id_dictionary[random_one(9)] = i
-    
-    
-    for j in id_dictionary:
-        lista_random.append(id_dictionary[j])
+    for j in id_dictionary.keys():
+        key_list.append(j)
+    key_list.sort()
+    for k in key_list:
+        lista_random.append(id_dictionary[k])
     print(lista_random)
 
 shuffle_list([1, False, 'Hi', True, 2])
+shuffle_list([1, False, 'Hi', True, 2])
+shuffle_list([1, False, 'Hi', True, 2])
+shuffle_list([1, False, 'Hi', True, 2])
+shuffle_list([1, False, 'Hi', True, 2])
+shuffle_list([1, False, 'Hi', True, 2])
+shuffle_list([1, False, 'Hi', True, 2])
+
+""" output
+[True, False, 1, 'Hi', 2]
+[True, 'Hi', False, 2, 1]
+[False, 2, 'Hi', True, 1]
+[True, 2, False, 1, 'Hi']
+['Hi', False, 1, 2, True]
+['Hi', True, 1, 2, False]
+[1, False, 'Hi', True, 2] """
