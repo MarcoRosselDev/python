@@ -11,18 +11,17 @@ output:
 
 countries = [[('Finland', 'Helsinki')], [('Sweden', 'Stockholm')], [('Norway', 'Oslo')]]
 
-for y in countries:
-    final_list = []
-    for pink in y:
-        new_list = []
-        pink = list(pink)
-        for string in pink:
-            string.upper()
-            new_list.append(string)
-        final_list.append(new_list)
-    print(final_list)
+b = [box for box in countries for i in box]
 
-""" output:
-[['Finland', 'Helsinki']]
-[['Sweden', 'Stockholm']]
-[['Norway', 'Oslo']] """
+
+for box in countries:
+    f = []
+    for sub_box in box:
+        f = []
+        sub_box = list(sub_box)
+        sub_box.insert(1, sub_box[0][:3])
+        sub_list = []
+        for i in sub_box:
+            i = i.upper()
+            sub_list.append(i)
+    print(f)
