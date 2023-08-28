@@ -4,15 +4,21 @@ from functools import reduce
 
 countries = ['Estonia', 'Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland']
 
-def concat_strings(*items):
+def concat_strings(*item_str):
     string_return = ''
-    for each in items:
-        if each == items[0]:
+    print()
+    for i in item_str:
+        print(i)
+        print()
+        string_return += str(i)
+
+    """ for each in items:
+        if each == countries[0]:
             string_return += f'{each}'
-        elif each == each[-1]:
+        elif each == countries[-1]:
             string_return += f' and {each} are north European countries'
         else:
-            string_return += f', {each}'
+            string_return += f', {each}' """
     return string_return
 
 outside = concat_strings(countries)
