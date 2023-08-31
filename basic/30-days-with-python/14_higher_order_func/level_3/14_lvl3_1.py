@@ -5,3 +5,6 @@ file and follow the tasks below: """
 
 from countries_data import dict_countries
 print(dict_countries[0])
+
+for i in dict_countries:
+    print(i['capital'])
