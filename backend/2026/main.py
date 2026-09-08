@@ -35,10 +35,42 @@ def bucle_for_string () :
     # n
     # g
 
-my_dicc = {'name': 'marco', 'age': 33, 'pareja': True}
+def bucle_for_diccionario ():
+    my_dicc = {'name': 'marco', 'age': 33, 'pareja': True}
 
-for clave, valor in my_dicc.items():
-    print(clave, valor)
-# name marco
-# age 33
-# pareja True
+    for clave, valor in my_dicc.items():
+        print(clave, valor)
+    # name marco
+    # age 33
+    # pareja True
+
+def bucle_while():
+    num = 0
+
+    while num < 25:
+        print(num)
+        num+=3
+    # 0
+    # 3
+    # 6
+    # 9
+    # 12
+    # 15
+    # 18
+    # 21
+    # 24
+
+def fibonacci (n):
+    if n == 0 or n == 1:
+        return n
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+
+# print(fibonacci(8))
+
+arr = []
+
+for num in range(13):
+    arr.append(fibonacci(num))
+
+print(arr) # [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]

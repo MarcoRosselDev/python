@@ -347,4 +347,151 @@ for clave, valor in my_dicc.items():
 # pareja True
 ```
 # Ciclo while
-2:55:31
+
+ejemplo:
+```python
+num = 0
+
+while num < 25:
+    print(num)
+    num+=3
+# 0
+# 3
+# 6
+# 9
+# 12
+# 15
+# 18
+# 21
+# 24
+```
+
+# Funciones
+```python
+def nombre_fn(parametros=devault_value):
+    # codigo
+    return value
+
+#llamado de la fn
+variable = nombre_fn() 
+```
+> si no existe return el valor por defecto es None
+
+# Recursion
+funcion que se llama a si misma
+```python
+def fibonacci (n):
+    if n == 0 or n == 1:
+        return n
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+
+arr = []
+
+for num in range(13):
+    arr.append(fibonacci(num))
+
+print(arr) # [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
+```
+# Archivos
+
+para habrir archivos
+
+```python
+with open("file.txt", "r") as archivo:
+    # trabajar con el archivo
+```
+ejemplo:
+```python
+with open("./frases.txt", "r") as file:
+    for linea in file:
+        print("-----new-line-----")
+        print(linea)
+
+""" 
+-----new-line-----
+"El secreto de salir adelante es empezar." — Mark Twain
+
+-----new-line-----
+"Sé el cambio que quieres ver en el mundo." — Mahatma Gandhi
+
+-----new-line-----
+"No tienes que ser grande para empezar, pero tienes que empezar para ser grande." — Zig Ziglar
+
+-----new-line-----
+"El éxito es la suma de pequeños esfuerzos repetidos día tras día." — Robert Collier
+
+-----new-line-----
+"No cuentes los días, haz que los días cuenten." — Muhammad Ali
+"""
+```
+### Modos de apertura de archivo:
+* r --> leer
+* w --> escribir
+* a --> agregar
+* agregar un + incluye leer. Por ejemplo, w+ es leer y escribir.
+
+# Importacion
+
+sintaxis:
+
+import math as matematicas <---- importar con otro alias  
+from math import pow  <----- importar elemento especifico  
+from modulo import *  <----- importar todo desde el modulo  
+
+# Try except
+
+```python
+try:
+    # intentar ejecutar este codigo
+except:
+    # si ocurre un error, detener
+    # y ejecutar este codigo
+```
+except con un tipo de error x:
+```python
+try:
+    resultado = num1 / num2
+    print(resultado)
+except ZeroDivisionError as err:
+    print("error de divicion por cero", err)
+    # tambien podemos darles un alias como aqui, lo renombramos 'err'
+```
+else:
+```python
+try:
+    # intenta ejecutar este codigo
+except tipo_de_error as e:
+    # detener el codigo y ejecutar este codigo
+else:
+    # si no ocurrio un error ejecutar este codigo
+finally:
+    # luego, ejecutar este codigo
+```
+
+# POO (programacion orientada a objetos)
+sintaxis:
+```python
+class CuentaBancaria:
+    """ funcionalidad importante:
+    * retirar
+    * depositar
+    * generar balance
+    * actualizar datos
+     """
+    def __init__(self, num_cuenta, nombre_titular, balance):
+        self.num_cuenta = num_cuenta
+        self.nombre_titular = nombre_titular
+        self.balance = balance
+
+    def generar_balance(self):
+        print(self.balance)        
+
+    def depositar(self, monto):
+        if monto > 0:
+            self.balane += monto
+
+mi_cuenta = CuentaBancaria("105-356-645", "Nora sSmith", 5600)
+print(mi_cuenta.balance)
+
+```
