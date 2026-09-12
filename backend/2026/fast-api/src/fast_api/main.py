@@ -1,5 +1,6 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Body
 from pydantic import BaseModel
+#from fastapi import Body
 
 app = FastAPI()
 
@@ -19,7 +20,21 @@ def read_root():
 def read_item(item_id: int, q: str | None = None):
     return {"item_id": item_id, "q": q}
 
+@app.post("/post")
+def extract_body(body:dict = Body(...)):
+    """ if we past to the body :
+    {
+        "nombre": "marco",
+        "age": 33
+    }
+    we get:
 
-@app.put("/items/{item_id}")
+    {'nombre': 'marco', 'age': 33} 
+    if we print body in the console
+    """
+    print(body)
+    return {"mess": "info publicada"}
+
+""" @app.put("/items/{item_id}")
 def update_item(item_id: int, item: Item):
-    return {"item_name": item.name, "item_id": item_id}
+    return {"item_name": item.name, "item_id": item_id} """
