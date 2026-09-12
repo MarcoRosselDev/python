@@ -10,6 +10,15 @@ class Item(BaseModel):
     price: float
     is_offer: bool | None = None
 
+class Body_Post(BaseModel):
+    title: str
+    content: str
+    age: int
+
+@app.post("/post/new-item")
+def post_new_item(body:Body_Post):
+    print(body.content, body.title, body.age)
+    return {"msg":"Contenido publicado exitosamente!"}
 
 @app.get("/")
 def read_root():
