@@ -1,5 +1,5 @@
 from fastapi import FastAPI, Body
-from pydantic import BaseModel
+from pydantic import BaseModel, Optional
 #from fastapi import Body
 
 app = FastAPI()
@@ -14,6 +14,7 @@ class Body_Post(BaseModel):
     title: str
     content: str
     age: int
+    reatio: Optional[int] = None
 
 @app.post("/post/new-item")
 def post_new_item(body:Body_Post):
